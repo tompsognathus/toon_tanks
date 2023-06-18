@@ -30,8 +30,14 @@ private:
 	UPROPERTY(EditAnywhere, Category = "Movement")
 	float MoveSpeed = 100.f;
 
+	UPROPERTY(EditAnywhere, Category = "Movement")
+	float RotationSpeed = 100.f;
+
 	UFUNCTION(BlueprintCallable)
 	void Move(FVector Direction);
+
+	UFUNCTION(BlueprintCallable)
+	void Rotate(FVector Direction);
 
 	UFUNCTION(BlueprintCallable)
 	void Shoot();

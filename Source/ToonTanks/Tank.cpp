@@ -31,6 +31,13 @@ void ATank::Move(FVector Direction)
 
 }
 
+void ATank::Rotate(FVector Direction)
+{
+	FQuat DeltaRotation = FQuat::MakeFromEuler(FVector(0.f, 0.f, Direction.X * RotationSpeed * GetWorld()->DeltaTimeSeconds));
+
+	AddActorLocalRotation(DeltaRotation);
+}
+
 void ATank::Shoot()
 {
 	UE_LOG(LogTemp, Display, TEXT("Shooting"));
