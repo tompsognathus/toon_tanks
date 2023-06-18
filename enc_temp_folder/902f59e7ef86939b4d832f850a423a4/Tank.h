@@ -19,22 +19,13 @@ public:
 	ATank();
 
 private:
-	// Components
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	class USpringArmComponent* SpringArm;
 
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	class UCameraComponent* Camera;
-
-	// Movement
-	UPROPERTY(EditAnywhere, Category = "Movement")
-	float MoveSpeed = 100.f;
-
-	UFUNCTION(BlueprintCallable)
-	void Move(FVector Direction);
-
-	UFUNCTION(BlueprintCallable)
-	void Shoot();
+	
+	void Move(float Value);
 
 public:
 	// Called to bind functionality to input

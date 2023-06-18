@@ -22,17 +22,8 @@ void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 }
 
-void ATank::Move(FVector Direction)
+void ATank::Move(float Value)
 {
-	FVector DeltaLocation(0.f);
-	DeltaLocation.X = Direction.Y * MoveSpeed * GetWorld()->DeltaTimeSeconds;
 
-	AddActorLocalOffset(DeltaLocation);
-
-}
-
-void ATank::Shoot()
-{
-	UE_LOG(LogTemp, Display, TEXT("Shooting"));
 }
 
