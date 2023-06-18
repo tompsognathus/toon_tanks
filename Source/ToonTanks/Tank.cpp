@@ -14,3 +14,16 @@ ATank::ATank()
 	Camera->SetupAttachment(SpringArm);
 
 }
+
+// Called to bind functionality to input
+void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+{
+	Super::SetupPlayerInputComponent(PlayerInputComponent);
+
+}
+
+void ATank::Move(float Value)
+{
+
+}
+
