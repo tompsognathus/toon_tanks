@@ -27,7 +27,7 @@ void ATank::Move(FVector Direction)
 	FVector DeltaLocation(0.f);
 	DeltaLocation.X = Direction.Y * MoveSpeed * GetWorld()->DeltaTimeSeconds;
 
-	AddActorLocalOffset(DeltaLocation);
+	AddActorLocalOffset(DeltaLocation, true);
 
 }
 
